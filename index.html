@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Car Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="game" id="game">
+      <div class="score" id="score">Score: 0</div>
+      <div class="top-right">
+        <button class="small-btn" id="restart">Restart</button>
+      </div>
+
+      <div class="car" id="car">
+        <div class="wheel left"></div>
+        <div class="wheel right"></div>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <video id="lossVideo" playsinline preload="auto">
+          <source src="video.mp4" type="video/mp4">
+        </video>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="btn" id="tryAgain">Try again</button>
+        </div>
+      </div>
+
+      <div class="controls" aria-hidden="true">
+        <div class="touch-btn" id="leftBtn">◀</div>
+        <div class="touch-btn" id="rightBtn">▶</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
